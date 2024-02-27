@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Logincontroller;
+use App\Http\Controllers\Signupcontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 // Login    
 Route::get('/',[Logincontroller::class,'index'] );
+Route::post('/',[Logincontroller::class,'store'] );
+
+//signup
+Route::get('/signup',[Signupcontroller::class,'index'] );
+Route::post('/signup',[Signupcontroller::class,'store'] );
