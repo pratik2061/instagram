@@ -23,6 +23,6 @@ class Signupcontroller extends Controller
         $user->email=$request['email'];
         $user->password=Hash::make($request['password']);
         $user->save();
-        return redirect('/')->with('success','User created successfully!!');
+        return redirect('/');
     }
 }
