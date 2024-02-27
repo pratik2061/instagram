@@ -10,10 +10,8 @@
          <form action="{{url('/')}}" method="post">
             @csrf
              <div class="text-center mt-[50px]">
-                @foreach ($user as $user )
                  <input type="text" name="email" id="" required placeholder="Email" class="border-[#ccc] border-[1px] h-[35px] w-[250px] px-[10px] rounded-[3px]">
                  <input type="password" name="password" id="" required placeholder="Password" class="border-[#ccc] border-[1px] h-[35px] w-[250px] px-[10px] rounded-[3px] mt-[6px]">
-                 @endforeach
                 </div>
             <div class="text-center mt-[50px]">
                 <div>
