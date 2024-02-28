@@ -44,7 +44,7 @@
                  </span>
                 </div>
                 </div>
-            <div class="text-center mt-[50px] absolute left-[57px] bottom-[10px]">
+            <div class="text-center mt-[50px] absolute left-[57px] bottom-[30px]">
                 <div>         <hr>
                 <button class="bg-[#4cb5f9] px-[101px] py-[6px] rounded-[8px] text-white font-bold hover:bg-blue-500">Sign up</button><br>
                 </div>      
