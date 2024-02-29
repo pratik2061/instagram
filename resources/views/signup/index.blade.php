@@ -5,12 +5,20 @@
 @section('main-section')
 <section class="w-[100%] h-[100vh] flex justify-center relative">
     {{-- main section start--}}
-    <div class="border-[1px] border-[#ccc] w-[370px] h-[470px] m-[90px] rounded-[5px] relative">
+    {{-- <div class="flex justify-center">
+    @if (session::has('error'))
+        <p class="text-[#ff0000] font-bold">{{session::get('error')}}</p>
+    @endif
+    @if (session::has('success'))
+    <p class="text-[#008800] font-bold">{{session::get('success')}}</p>
+@endif
+    </div> --}}
+    <div class="border-[1px] border-[#ccc] w-[370px] h-[470px] m-[90px] rounded-[5px] relative mx-auto">
          <span class="pl-[95px]  text-[44px] font-bold">ℑ𝔫𝔰𝔱𝔞𝔤𝔯𝔞𝔪</span>
          <span class="text-center"><p class="p-[10px] text-xl text-[#666464]">Sign up to see photos and videos from your friends.</p></span>
          <form action="{{url('/')}}/signup" method="post" class="">
             @csrf
-             <div class="text-center mt-[20px]">
+             <div class="text-center mt-[10px] mx-auto">
                 <div>
                 <input type="text" name="name" id="" placeholder="Fullname" class="border-[#ccc] border-[1px] h-[35px] w-[250px] px-[10px] rounded-[3px]" ><br>
                 <span class="text-[#ff0000] text-[10px] font-bold ">
@@ -44,7 +52,7 @@
                  </span>
                 </div>
                 </div>
-            <div class="text-center mt-[50px] absolute left-[57px] bottom-[30px]">
+            <div class="text-center mt-[50px] absolute left-[57px] bottom-[25px]">
                 <div>         <hr>
                 <button class="bg-[#4cb5f9] px-[101px] py-[6px] rounded-[8px] text-white font-bold hover:bg-blue-500">Sign up</button><br>
                 </div>      

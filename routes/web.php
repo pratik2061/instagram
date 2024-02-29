@@ -1,7 +1,5 @@
 <?php
-
-use App\Http\Controllers\Logincontroller;
-use App\Http\Controllers\Signupcontroller;
+use App\Http\Controllers\Authcontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +12,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-// Login    
-Route::get('/',[Logincontroller::class,'index'] );
-Route::post('/',[Logincontroller::class,'store'] );
-
+//home
+route::get("/home", function () {
+    return view("home.index");
+});
+//login
+Route::get("/",[Authcontroller::class,"indexLogin"]);
+Route::post("/",[Authcontroller::class,"login"]);
 //signup
-Route::get('/signup',[Signupcontroller::class,'index'] );
-Route::post('/signup',[Signupcontroller::class,'store'] );
+Route::get("/signup",[Authcontroller::class,"indexSignup"]);
+Route::post("/signup",[Authcontroller::class,"signup"]);
